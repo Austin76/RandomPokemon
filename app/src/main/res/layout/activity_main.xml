@@ -10,6 +10,7 @@
         android:id="@+id/pokemonImage"
         android:layout_width="300dp"
         android:layout_height="300dp"
+        android:layout_marginBottom="300dp"
         app:srcCompat="@android:drawable/ic_menu_gallery"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,24 +18,24 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/pokemonInfo1"
+        android:id="@+id/pokemonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Info 1"
+        android:text="Pokémon name"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/pokemonImage" />
 
     <TextView
-        android:id="@+id/pokemonInfo2"
+        android:id="@+id/pokedexNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Info 2"
+        android:text="Pokédex entry"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pokemonInfo1" />
+        app:layout_constraintTop_toBottomOf="@id/pokemonName" />
 
     <Button
         android:id="@+id/pokemonButton"
@@ -43,7 +44,30 @@
         android:text="Get a random Pokémon!"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pokemonInfo2"
+        app:layout_constraintTop_toBottomOf="@id/pokedexNumber"
         app:layout_constraintStart_toStartOf="parent" />
+
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="230dp"
+        android:layout_height="50dp"
+        android:hint="Enter Pokémon Name or ID"
+        android:layout_marginTop="30dp"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pokemonButton" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search for a Pokémon!"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchEditText" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
